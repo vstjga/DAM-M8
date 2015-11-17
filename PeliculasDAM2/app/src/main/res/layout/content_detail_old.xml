@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="5dp">
+
+<ImageView
+    android:id="@+id/ivPosterImage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:adjustViewBounds="true"
+    android:maxHeight="150dp"
+    android:scaleType="fitXY" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="10dp"
+    android:layout_below="@+id/ivPosterImage"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tituloPeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:hint="mi pelicula"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/popularidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tituloPeli"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/fechaEstrena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popularidad"
+        android:ellipsize="end"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/resumenPeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fechaEstrena"
+        android:ellipsize="end"
+        android:maxLines="20"
+        android:textSize="12sp" />
+
+</RelativeLayout>
+
+</RelativeLayout>

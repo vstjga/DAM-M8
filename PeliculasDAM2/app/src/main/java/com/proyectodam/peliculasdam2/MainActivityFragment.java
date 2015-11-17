@@ -1,8 +1,10 @@
 package com.proyectodam.peliculasdam2;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Movie;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -12,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -43,6 +46,7 @@ public class MainActivityFragment extends Fragment {
 
     private ArrayList<Result> items;
     private ResultAdapter adapter;
+    public static String OBJETO_PELICULA = "OBJETO_PELICULA";
 
     public MainActivityFragment() {
     }
@@ -71,6 +75,18 @@ public class MainActivityFragment extends Fragment {
                 items
         );
         lvPelis.setAdapter(adapter);
+
+        lvPelis.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(getContext(), DetailActivity.class);
+                i.putExtra(OBJETO_PELICULA, adapter.getItem(position));
+                startActivity(i);
+            }
+        });
+
+
+
 
         return rootView;
 
