@@ -37,6 +37,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.proyectodam.peliculasdam2.MainActivity" />
         </activity>
+
+
     </application>
 
 </manifest>

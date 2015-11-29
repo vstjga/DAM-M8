@@ -45,7 +45,7 @@ public class DetailActivity extends AppCompatActivity {
         String poster = result.getposter_path();
         //      String url_img = "http://image.tmdb.org/t/p/w300/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg";
         String url_img = "http://image.tmdb.org/t/p/w600" + poster;
-        Picasso.with(this).load(url_img).into(ivPosterImage);
+         Picasso.with(this).load(url_img).into(ivPosterImage);
 
 
     }
