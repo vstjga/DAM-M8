@@ -33,16 +33,16 @@ public class ResultAdapter extends ArrayAdapter<Result> {
             convertView = inflater.inflate(R.layout.lvpelis_row, parent, false);
         }
 
-              TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
-        TextView tvCriticsScore = (TextView) convertView.findViewById(R.id.tvCriticsScore);
-        TextView tvDate = (TextView) convertView.findViewById(R.id.tvDate);
+      //  TextView tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
+      //  TextView tvCriticsScore = (TextView) convertView.findViewById(R.id.tvCriticsScore);
+      //  TextView tvDate = (TextView) convertView.findViewById(R.id.tvDate);
         ImageView ivPosterImage = (ImageView) convertView.findViewById(R.id.ivPosterImage);
 
-        tvTitle.setText(result.getTitle());
-        tvCriticsScore.setText(result.getPopularity() + "%");
+      //  tvTitle.setText(result.getTitle());
+      //  tvCriticsScore.setText(result.getPopularity() + "%");
 
 //        tvDate.setText(result.getOverview());
-        tvDate.setText(result.getrelease_date());
+      //  tvDate.setText(result.getrelease_date());
 
 
         String poster = result.getposter_path();

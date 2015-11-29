@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
+import android.widget.GridView;
 import com.proyectodam.peliculasdam2.json.*;
 
 import java.io.BufferedReader;
@@ -67,7 +67,9 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        ListView lvPelis = (ListView) rootView.findViewById(R.id.lvPelis);
+   //     ListView lvPelis = (ListView) rootView.findViewById(R.id.lvPelis);
+        GridView lvPelis = (GridView) rootView.findViewById(R.id.lvPelis);
+
         items = new ArrayList<Result>();
         adapter = new ResultAdapter(
                 getContext(),
@@ -89,14 +91,6 @@ public class MainActivityFragment extends Fragment {
 
 
         return rootView;
-
-
-
-
-
-
-
-
 
 
     }
@@ -122,7 +116,7 @@ public class MainActivityFragment extends Fragment {
         TheMovieDatabaseAPIClient apiClient = new TheMovieDatabaseAPIClient();
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-        String tipusConsulta = preferences.getString("tipus_consulta", "valoradas");
+        String tipusConsulta = preferences.getString("tipus_consulta", "populares");
 
         String pais          = preferences.getString("pais", "valoradas");
 

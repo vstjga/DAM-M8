@@ -8,11 +8,12 @@
     tools:context=".MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
-    <ListView
+    <GridView
         android:id="@+id/lvPelis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="90dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:gravity="center"/>
 </RelativeLayout>
